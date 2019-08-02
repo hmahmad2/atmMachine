@@ -2,9 +2,13 @@ var balance = 500.00;
 var checkBalance = true;
 var isActive = false;
 
-var testNum = parseFloat(prompt("test: enter a number"));
-if (isNaN(testNum) || testNum === '') {
-    alert("Please enter a real number thank you very much");
+function makeDeposit() {
+    var deposit = parseFloat(prompt("Please enter your deposit"));
+    if (isNaN(deposit) || deposit === '') {
+        alert("Please enter a real number thank you very much");
+        makeDeposit();
+    }
+    balance += deposit;
 }
 
 if (!checkBalance) {
