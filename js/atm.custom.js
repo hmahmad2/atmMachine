@@ -11,6 +11,14 @@ function makeDeposit() {
     balance += deposit;
 }
 
+function checkBalance() {
+    if (!checkBalance) {
+        console.log("Thank you. Have a nice day");
+    } else if (isActive) {
+        alert("Current Balance is " + balance);
+    }
+}
+
 if (!checkBalance) {
   console.log("Thank you. Have a nice day");
 } else if (isActive && balance > 0){
