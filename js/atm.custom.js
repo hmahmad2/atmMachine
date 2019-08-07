@@ -5,10 +5,19 @@ var isActive = false;
 function makeDeposit() {
     var deposit = parseFloat(prompt("Please enter your deposit"));
     if (isNaN(deposit) || deposit === '') {
-        alert("Please enter a real number thank you very much");
+        alert("Please enter a real number.");
         makeDeposit();
     }
     balance += deposit;
+}
+
+function makeWithdrawl() {
+    var withdrawl = parseFloat(prompt("How much would you like to withdraw?"));
+    if (isNaN(withdrawl) || deposit === '') {
+        alert("Please enter a real number.");
+        makeWithdrawl();
+    }
+    balance -= withdrawl;
 }
 
 function checkBalance() {
