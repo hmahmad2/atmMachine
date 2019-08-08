@@ -24,10 +24,21 @@ function checkBalance() {
     if (!checkBalance) {
         console.log("Thank you. Have a nice day");
     } else if (isActive) {
-        alert("Current Balance is " + balance);
+        alert("Current Balance is " + balance.toFixed(2));
     }
 }
 
+// I don't have a system to use previously-created booleans. Gonna have to keep this simple
+function atm() {
+    var atmInteraction = parseFloat(prompt(
+        "Please choose between:\n1. Check Balance\n2. Deposit\n3. Withdrawl\n(Please input a number associated with your desired action"));
+}
+// var bool = 'Depot' = 'depot';
+// console.log(bool);
+
+atm();
+
+// Original
 if (!checkBalance) {
   console.log("Thank you. Have a nice day");
 } else if (isActive && balance > 0){
